@@ -8,4 +8,8 @@ class FirstTest extends FlatSpec with Matchers {
     true should be (true)
   }
 
+  ignore should "fail" in {
+    true should be (false)
+  }
+
 }
