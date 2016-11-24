@@ -98,13 +98,13 @@ Show something ....
 
 ### task2:
 
-- create a case class `Driver` with at lease two arguments
+- create a case class `Driver` with at least two arguments
   - driver license
   - age
-- define a method `canDrive_? : Boolean` to check if driver's age is over 18
+- define a method `canDrive_? : Boolean` to check if driver's age is over or equal 18
 - create a unit test to cover the method
 - add additional assertion and use `.copy()` with named parameter to define new value for age
-- add assertion to check if new value was properly re-defined
+  - use assertion to check if new value was properly re-defined
 
 ## module3 - collections & functional programming
 
