@@ -1,0 +1,202 @@
+# Introduction
+
+Show something ....
+
+## Scala basics
+
+- REPL
+- `val`, `var`, `def`
+- `if`, `for`
+- `String`, `Int`
+- generics
+
+### task:
+
+- use REPL to sum two Ints and if the result is greater than 0 print it, in other case print a message
+- use REPL to define a mutable empty String variable, then assign a message to the variable
+  and if length of the message is greater than 10, print it 10 times, in other case just once
+
+## SBT setting up project & basic commands
+
+- directory structure
+- configuration files
+- commands: `compile`, `clean`, `reload`, `console`, `test`, `testOnly`
+
+### task:
+
+- create a folder for a new project
+- create `src/main/resources`, `src/main/scala` folders
+- create `src/test/resources`, `src/test/scala` folders
+- create `build.sbt` file in the root folder and define project's basic information like
+  `name`, `version`, `scalaVersion` and first dependency
+- start sbt in the root folder
+
+## Unit testing
+
+- ScalaTest, Spec2
+- how to create a unit test
+
+### task:
+
+- create a simple unit test with passing assertion
+- create another simple unit test with failing assertion
+- use `test` or `testOnly` to check results
+- `ignore` tha failing test and re-run the test
+
+## module1 - OOP
+
+- `class`, `case class`
+- performing operations in constructor
+- `object`
+- companion object & `apply`
+
+### task1:
+
+- create a class `SimplePerson` with String fields `firstName` and `lastName`
+- define a method to calculate `fullName` - concatenate `firstName` and `lastName`
+- create a unit test to cover the above logic
+
+### task2:
+
+- repeat the same from task1 but using `case class` and class name `Person`
+- add additional assertion to check if `firstName` and `lastName` have proper values
+
+### task3:
+
+- create a case class `AutoPerson` with String fields `firstName` and `lastName`
+- define a mutable String field `fullName`
+- calculate the `fullName` in constructor
+- create a unit test to cover above logic
+
+### task4:
+
+- create an object `PersonSingleton`
+- define a mutable field `fullName`
+- create two unit tests
+  - in the first one assign value to `fullName` and assert its value
+  - with second test, only assert the value from the first test
+
+### task5:
+
+- create a companion object for the case class `Person`
+- define method `apply` which accept just single string
+  - split the argument on white space to create proper `Person` object
+- create a unit test to cover creating a person based on single string
+
+## module2 - methods
+
+ - default arguments
+ - named arguments
+
+### task1:
+
+- create a case class `Car`
+- define a method with at least two arguments
+  - define the last argument with default value
+- combine all arguments as a result
+- create unit test to cover calling the method using default value and passing specific value for the default argument
+
+### task2:
+
+- create a case class `Driver` with at lease two arguments
+  - driver license
+  - age
+- define a method `canDrive_? : Boolean` to check if driver's age is over 18
+- create a unit test to cover the method
+- add additional assertion and use `.copy()` with named parameter to define new value for age
+- add assertion to check if new value was properly re-defined
+
+## module3 - collections & functional programming
+
+- `Seq`, `List`, `Map`,
+- `elem :: Nil`
+- `.empty`, `.filter`, `.map`, `.find`, `.count`
+- `.get`, `.head`, `.headOption`
+
+### task1:
+
+- create a case class `CarMileage` with `Seq` field `mileage`
+- create a unit test and init `CarMileage` using `Seq(...)`
+- assert if `mileage` value is the same as sequence using `elem :: Nil` construction
+
+### task2:
+
+- create a case class `CarGarage` with field `cars: Map[String, Car]`
+- define a method to find a car by name
+- define a method to count all cars in the `Garage`
+- create a unit test to cover the above logic
+
+### task3:
+
+- extend the case class `Car` and add a `broken:  Boolean` field
+- define additional method in `CarGarage` to list cars which are broken
+- create a unit test to cover the above logic
+
+### task4:
+- extend `CarGarage` with method `drivers`, and extract all driver licences from cars
+- create a unit test to cover the logic
+
+## module4 - Optionals & for-expressions
+
+- `Option` & `None` & `Some`,
+- `.flatMap`, `.map`, `.flatten`
+- simple `for`, for-comprehension
+
+### task1:
+
+- extend the class `Car` and define an optional field `driver` of type `Driver` with default value
+- create a unit test to cover creating a `Car` with and without a driver
+
+### task2:
+
+- extend `CarGarage` with method `readyCars` which looks for cars with `driver` field defined
+- create a unit test to cover the logic
+
+### task3:
+
+- extend `CarGarage` with method `readyDrivers` which looks for cars with `driver` field defined and returns those drivers
+- create a unit test to cover the logic
+
+### task4:
+
+- redefine `readyDrivers` to use `for-comprehension`
+- use the same unit test as in task3 to check if everything is ok
+
+## module5 - traits & inheritance
+
+- `trait`, `extends`, `with`
+- case objects (better than enums)
+
+### task1:
+
+- define a trait `Professional` with method `professionalDriverLicense`
+- define a new class `ProfessionalDriver` which extends `SimplePerson`
+- implement missing method
+  - you can extend `SimplePerson` and add optional driver license field with default value
+  - use this value to implement `professionalDriverLicense` method
+- create a unit test to cover logic of `professionalDriverLicense`
+
+### task2:
+
+- define `sealed trait DriverType`
+- create related companion object
+- inside the companion object add two case objects `Normal` and `Professional` implementing the trait
+- extend `Driver` case class and add optional `driverType` field of type `DriverType`
+- create a test case covering creating `Driver` objects with both values of `DriverType`
+
+## module6 - pattern matching
+
+- `match` & `case`
+- tuples
+- `unapply`
+
+### task1:
+
+- add additional type to `DriverType` - `Missing`
+- extend `Driver` case class and define `driverLicences` method which returns driver's license prefixed with given type
+- if type isn't defined or is equal to `Missing` return an empty string
+- create a test case to cover this logic
+
+## module7 - Higher Order Functions
+
+- `(Args) => (Input) => Result`
