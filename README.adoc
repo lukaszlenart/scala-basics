@@ -171,30 +171,37 @@ Show something ....
 ### task1:
 
 - define a trait `Professional` with method `professionalDriverLicense`
-- define a new class `ProfessionalDriver` which extends `SimplePerson`
+- define a new case class `ProfessionalDriver` which extends `SimplePerson` and with `Professional` trait
 - implement missing method
   - you can extend `SimplePerson` and add optional driver license field with default value
   - use this value to implement `professionalDriverLicense` method
+  - or
+  - define a new field in `ProfessionalDriver` class and uses it to implement the method
 - create a unit test to cover logic of `professionalDriverLicense`
 
 ### task2:
 
+- change implementation of `professionalDriverLicense` in `Professional` trait and return `missing` by default
+- define a new case class `SimpleDriver` which extends `SimplePerson` and with `Professional` trait
+- create a unit test to cover logic of default implementation
+
+### task3:
+
 - define `sealed trait DriverType`
 - create related companion object
-- inside the companion object add two case objects `Normal` and `Professional` implementing the trait
+- inside the companion object add two `case object`s `Normal` and `Professional` implementing the trait
 - extend `Driver` case class and add optional `driverType` field of type `DriverType`
 - create a test case covering creating `Driver` objects with both values of `DriverType`
 
 ## module6 - pattern matching
 
 - `match` & `case`
-- tuples
 - `unapply`
 
 ### task1:
 
 - add additional type to `DriverType` - `Missing`
-- extend `Driver` case class and define `driverLicences` method which returns driver's license prefixed with given type
+- extend `Driver` case class and define `driverLicense` method which returns driver's license prefixed with given type
 - if type isn't defined or is equal to `Missing` return an empty string
 - create a test case to cover this logic
 
