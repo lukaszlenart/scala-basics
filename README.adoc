@@ -2,6 +2,8 @@
 
 # Introduction
 
+This is a basic Scala workshop to allow smooth introduction into principal Scala features.
+
 ## Scala basics
 
 - REPL
