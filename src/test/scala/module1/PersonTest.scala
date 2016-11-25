@@ -14,4 +14,11 @@ class PersonTest extends FlatSpec with Matchers {
     person.lastName should be("Lenart")
   }
 
+  it should "allow create a Person based in full name" in {
+    val person = Person("Lukasz Lenart")
+
+    person.fullName should be("Lukasz Lenart")
+    person.firstName should be("Lukasz")
+    person.lastName should be("Lenart")
+  }
 }

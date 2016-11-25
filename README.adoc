@@ -81,7 +81,7 @@
 - create a companion object for the case class `Person`
 - define method `apply` which accept just single string
 ** split the argument on white space to create proper `Person` object
-- create a unit test to cover creating a person based on single string
+- create a unit test to cover creating a person based on a single string
 
 ## module2 - methods
 
