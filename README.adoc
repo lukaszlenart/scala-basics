@@ -1,6 +1,6 @@
-# Introduction
+:toc:
 
-Show something ....
+# Introduction
 
 ## Scala basics
 
