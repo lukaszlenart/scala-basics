@@ -1,5 +1,7 @@
 :toc:
 
+[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+
 # Introduction
 
 This is a basic Scala workshop to allow smooth introduction into principal Scala features.
