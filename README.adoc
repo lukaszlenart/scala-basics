@@ -99,7 +99,7 @@ Show something ....
 ### task2:
 
 - create a case class `Driver` with at least two arguments
-  - driver license
+  - licenseId
   - age
 - define a method `canDrive_? : Boolean` to check if driver's age is over or equal 18
 - create a unit test to cover the method
@@ -201,9 +201,14 @@ Show something ....
 ### task1:
 
 - add additional type to `DriverType` - `Missing`
-- extend `Driver` case class and define `driverLicense` method which returns driver's license prefixed with given type
-- if type isn't defined or is equal to `Missing` return an empty string
+- extend `Driver` case class and define `driverLicense` method which returns driver's `licenseId` prefixed with given type
+- if type isn't defined return only `licenseId`
 - create a test case to cover this logic
+
+### task2:
+
+- change logic of `driverLicense` method from task1 and if `driverType` equals `Missing` or is `None` return `licenseId`
+- add additional test case to cover this logic
 
 ## module7 - Higher Order Functions
 
