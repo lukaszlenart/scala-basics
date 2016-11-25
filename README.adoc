@@ -73,14 +73,14 @@ Show something ....
 - create an object `PersonSingleton`
 - define a mutable field `fullName`
 - create two unit tests
-  - in the first one assign value to `fullName` and assert its value
-  - with second test, only assert the value from the first test
+** in the first one assign value to `fullName` and assert its value
+** with second test, only assert the value from the first test
 
 ### task5:
 
 - create a companion object for the case class `Person`
 - define method `apply` which accept just single string
-  - split the argument on white space to create proper `Person` object
+** split the argument on white space to create proper `Person` object
 - create a unit test to cover creating a person based on single string
 
 ## module2 - methods
@@ -92,15 +92,15 @@ Show something ....
 
 - create a case class `Car` with field `make: String`
 - define a method with at least two arguments
-  - define the last argument with default value
+** define the last argument with default value
 - combine all the arguments and `make` field as a result
 - create unit test to cover calling the method using default value and passing specific value for the default argument
 
 ### task2:
 
 - create a case class `Driver` with at least two arguments
-  - licenseId
-  - age
+** licenseId
+** age
 - define a method `canDrive_? : Boolean` to check if driver's age is over or equal 18
 - create a unit test to cover the method
 - add additional assertion and use `.copy()` with named parameter to define new value for age
@@ -160,7 +160,7 @@ Show something ....
 ### task4:
 
 - redefine `readyDrivers` to use `for-comprehension`
-  - you can use `readDrivers2` name to keep the old version
+** you can use `readDrivers2` name to keep the old version
 - use the same unit test as in task3 to check if everything is ok
 
 ## module5 - traits & inheritance
@@ -173,10 +173,10 @@ Show something ....
 - define a trait `Professional` with method `professionalDriverLicense`
 - define a new case class `ProfessionalDriver` which extends `SimplePerson` and with `Professional` trait
 - implement missing method
-  - you can extend `SimplePerson` and add optional driver license field with default value
-  - use this value to implement `professionalDriverLicense` method
-  - or
-  - define a new field in `ProfessionalDriver` class and uses it to implement the method
+** you can extend `SimplePerson` and add optional driver license field with default value
+** use this value to implement `professionalDriverLicense` method
+** or
+** define a new field in `ProfessionalDriver` class and uses it to implement the method
 - create a unit test to cover logic of `professionalDriverLicense`
 
 ### task2:
