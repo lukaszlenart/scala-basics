@@ -36,3 +36,19 @@ case class CarGarage(cars: Map[String, Car]) {
   }
 
 }
+
+object CarGarage {
+
+  def ready_?(car: Car): Boolean = {
+    car match {
+      case Car(make, broken, Some(Driver(_, age, _)))
+        if make.equals("mercedes") && !broken && age > 18 =>
+
+        true
+
+      case _ =>
+        false
+    }
+  }
+
+}

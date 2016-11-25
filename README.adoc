@@ -210,6 +210,13 @@ Show something ....
 - change logic of `driverLicense` method from task1 and if `driverType` equals `Missing` or is `None` return `licenseId`
 - add additional test case to cover this logic
 
+### task3:
+
+- create a companion object for `CarGarage` case class
+- add `ready_?(car: Car): Boolean` method to the companion object
+- return `true` if car is not broken and its `make` is "mercedes" and `driver`'s `age` is over 18
+- create a test case to check implementation
+
 ## module7 - Higher Order Functions
 
 - `(Args) => (Input) => Result`
