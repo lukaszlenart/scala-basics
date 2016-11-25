@@ -1,6 +1,5 @@
 :toc:
 
-[[license]]
 image::http://img.shields.io/:license-apache-blue.svg[title = "License", link = "http://www.apache.org/licenses/LICENSE-2.0.html"]
 
 # Introduction
