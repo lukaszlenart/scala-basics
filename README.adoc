@@ -160,6 +160,7 @@ Show something ....
 ### task4:
 
 - redefine `readyDrivers` to use `for-comprehension`
+  - you can use `readDrivers2` name to keep the old version
 - use the same unit test as in task3 to check if everything is ok
 
 ## module5 - traits & inheritance
