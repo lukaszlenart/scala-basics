@@ -90,10 +90,10 @@ Show something ....
 
 ### task1:
 
-- create a case class `Car`
+- create a case class `Car` with field `make: String`
 - define a method with at least two arguments
   - define the last argument with default value
-- combine all arguments as a result
+- combine all the arguments and `make` field as a result
 - create unit test to cover calling the method using default value and passing specific value for the default argument
 
 ### task2:
@@ -108,9 +108,9 @@ Show something ....
 
 ## module3 - collections & functional programming
 
-- `Seq`, `List`, `Map`,
+- `Seq`, `List`, `Map`, tuples
 - `elem :: Nil`
-- `.empty`, `.filter`, `.map`, `.find`, `.count`
+- `.empty`, `.filter`, `.map`, `.find`, `.count`, `.sortBy`
 - `.get`, `.head`, `.headOption`
 
 ### task1:
@@ -122,18 +122,18 @@ Show something ....
 ### task2:
 
 - create a case class `CarGarage` with field `cars: Map[String, Car]`
-- define a method to find a car by name
-- define a method to count all cars in the `Garage`
+- define a method to find a car by given model
+- define a method to count all cars in the `Garage` matching given model
 - create a unit test to cover the above logic
 
 ### task3:
 
-- extend the case class `Car` and add a `broken:  Boolean` field
+- extend the case class `Car` and add a `broken:  Boolean` field with default value set to `false`
 - define additional method in `CarGarage` to list cars which are broken
 - create a unit test to cover the above logic
 
 ### task4:
-- extend `CarGarage` with method `drivers`, and extract all driver licences from cars
+- extend method from task3 to sort cars by `make`
 - create a unit test to cover the logic
 
 ## module4 - Optionals & for-expressions

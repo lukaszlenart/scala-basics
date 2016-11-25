@@ -1,12 +1,12 @@
 package module2
 
-case class Car() {
+case class Car(make: String, broken: Boolean = false) {
 
   def startEngine(key: String, cold: Boolean = true): String = {
     if (cold) {
-      s"$key - cold"
+      s"$key - $make is cold"
     } else {
-      key
+      s"$key - starting $make"
     }
   }
 
