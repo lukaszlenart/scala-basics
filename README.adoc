@@ -6,6 +6,16 @@ image::http://img.shields.io/:license-apache-blue.svg[title = "License", link = 
 
 This is a basic Scala workshop to allow smooth introduction into principal Scala features.
 
+## Prerequisites
+
+- install JDK8
+- install `sbt`
+- install IDE of your choice which supports Scala (IDEA Community Edition with Scala plugin is preferred)
+- checkout the project and start `sbt` within it to download all the dependencies
+```
+  git clone git@github.com:lukaszlenart/scala-basics.git
+```
+
 ## Scala basics
 
 - REPL, IntelliJ IDEA Scratch files
@@ -26,7 +36,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - configuration files
 - commands: `compile`, `clean`, `reload`, `console`, `test`, `testOnly`
 
-### task:
+### task1:
 
 - create a folder for a new project
 - create `src/main/resources`, `src/main/scala` folders
@@ -34,6 +44,12 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - create `build.sbt` file in the root folder and define project's basic information like
   `name`, `version`, `scalaVersion` and first dependency
 - start sbt in the root folder
+
+### task2:
+
+- use `sbt new` to generate a new project, use an example template from the page below
+
+  https://www.scala-sbt.org/1.0/docs/sbt-new-and-Templates.html
 
 ## Unit testing
 
@@ -45,7 +61,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - create a simple unit test with passing assertion
 - create another simple unit test with failing assertion
 - use `test` or `testOnly` to check results
-- `ignore` tha failing test and re-run the test
+- `ignore` the failing test and re-run the test
 
 ## module1 - OOP
 
@@ -56,7 +72,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 ### task1:
 
-- create a class `SimplePerson` with String fields `firstName` and `lastName`
+- create a class `SimplePerson` with `String` fields `firstName` and `lastName`
 - define a method to calculate `fullName` - concatenate `firstName` and `lastName`
 - create a unit test to cover the above logic
 
@@ -70,58 +86,59 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - create a case class `AutoPerson` with String fields `firstName` and `lastName`
 - define a mutable String field `fullName`
 - calculate the `fullName` in constructor
-- create a unit test to cover above logic
+- create a unit test to cover the above logic
 
 ### task4:
 
 - create an object `PersonSingleton`
 - define a mutable field `fullName`
 - create two unit tests
-** in the first one assign value to `fullName` and assert its value
-** with second test, only assert the value from the first test
+  - in the first one assign value to `fullName` and assert its value
+  - with the second test, assert only the value from the first test
 
 ### task5:
 
 - create a companion object for the case class `Person`
-- define method `apply` which accept just single string
-** split the argument on white space to create proper `Person` object
+- define a method `apply` which accept just single string
+  - split the argument on white space to create a proper `Person` object
 - create a unit test to cover creating a person based on a single string
 
 ## module2 - methods
 
- - default arguments
- - named arguments
+- default arguments
+- named arguments
 
 ### task1:
 
-- create a case class `Car` with field `make: String`
+- create a case class `Car` with a field `make: String`
 - define a method with at least two arguments
-** define the last argument with default value
+  - define the last argument with default value
 - combine all the arguments and `make` field as a result
-- create unit test to cover calling the method using default value and passing specific value for the default argument
+- create a unit test to cover calling the method using default value and passing specific value for the default argument
 
 ### task2:
 
 - create a case class `Driver` with at least two arguments
-** licenseId
-** age
+  - `licenseId`
+  - `age`
 - define a method `canDrive_? : Boolean` to check if driver's age is over or equal 18
 - create a unit test to cover the method
-- add additional assertion and use `.copy()` with named parameter to define new value for age
-  - use assertion to check if new value was properly re-defined
+- add additional assertion and use `.copy()` with named parameter to define a new value for the age
+  - use assertion to check if the new value was properly re-defined
 
 ## module3 - collections & functional programming
 
 - `Seq`, `List`, `Map`, tuples
-- `elem :: Nil`
+- `elem :: Nil`, `head :: tail`
 - `.empty`, `.filter`, `.map`, `.find`, `.count`, `.sortBy`
 - `.get`, `.head`, `.headOption`
 
 ### task1:
 
-- create a case class `CarMileage` with `Seq` field `mileage`
+- create a case class `CarMileage` with a field `mileage: Seq`
 - create a unit test and init `CarMileage` using `Seq(...)`
 - assert if `mileage` value is the same as sequence using `elem :: Nil` construction
+- assert if a first element of `mileage` value is the same using `head :: tail` construction
 
 ### task2:
 
@@ -177,10 +194,10 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - define a trait `Professional` with method `professionalDriverLicense`
 - define a new case class `ProfessionalDriver` which extends `SimplePerson` and with `Professional` trait
 - implement missing method
-** you can extend `SimplePerson` and add optional driver license field with default value
-** use this value to implement `professionalDriverLicense` method
-** or
-** define a new field in `ProfessionalDriver` class and uses it to implement the method
+  - you can extend `SimplePerson` and add optional driver license field with default value
+    use this value to implement `professionalDriverLicense` method
+  - or
+  - define a new field in `ProfessionalDriver` class and use it to implement the method
 - create a unit test to cover logic of `professionalDriverLicense`
 
 ### task2:
@@ -227,3 +244,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - functions that produce functions `def builder(input: Double): Double => Double`
 
  https://docs.scala-lang.org/tour/higher-order-functions.html
+
+### task1:
+
+### task2:
