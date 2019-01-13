@@ -8,7 +8,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 ## Scala basics
 
-- REPL
+- REPL, IntelliJ IDEA Scratch files
 - `val`, `var`, `def`
 - `if`, `for`
 - `String`, `Int`
@@ -142,7 +142,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 ## module4 - Optionals & for-expressions
 
-- `Option` & `None` & `Some`,
+- `Option` & `None` & `Some`, `Either`
 - `.flatMap`, `.map`, `.flatten`
 - simple `for`, for-comprehension
 
@@ -223,4 +223,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 ## module7 - Higher Order Functions
 
-- `(Args) => (Input) => Result`
+- functions that accept functions `def func(calcFn: Double => Double): Double
+- functions that produce functions `def builder(input: Double): Double => Double`
+
+ https://docs.scala-lang.org/tour/higher-order-functions.html
