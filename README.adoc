@@ -248,4 +248,9 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 ### task1:
 
+- define an object that will produce a function to accept a driver based on driver type and his age:
+  - a `Normal` driver can drive if his age is over or equal 18
+  - a `Professional` driver can drive if his age is over or equal 21
+  - any other driver cannot drive
+
 ### task2:
