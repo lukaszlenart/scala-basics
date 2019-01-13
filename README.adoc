@@ -11,10 +11,11 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - install JDK8
 - install `sbt`
 - install IDE of your choice which supports Scala (IDEA Community Edition with Scala plugin is preferred)
-- checkout the project and start `sbt` within it to download all the dependencies
+- checkout the project
 ```
   git clone git@github.com:lukaszlenart/scala-basics.git
 ```
+- start `sbt` within the project's folder to download all the dependencies
 
 ## Scala basics
 
