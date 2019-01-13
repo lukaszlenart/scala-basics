@@ -17,7 +17,7 @@ class CarGarageTest extends FlatSpec with Matchers {
 
     val carGarage = CarGarage(Map("mercedes1" -> car1, "mercedes2" -> car2, "mercedes3" -> car3))
 
-    carGarage.readCars should equal(car1 :: car2 :: Nil)
+    carGarage.readyCars should equal(car1 :: car2 :: Nil)
   }
 
   it should "list drivers assigned to cars" in {

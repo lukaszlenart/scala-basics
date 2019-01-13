@@ -16,7 +16,7 @@ case class CarGarage(cars: Map[String, Car]) {
     cars.filter(_._2.broken).values.toSeq.sortBy(_.make)
   }
 
-  def readCars: Seq[Car] = {
+  def readyCars: Seq[Car] = {
     cars.filter(_._2.driver.isDefined).values.toSeq
   }
 
