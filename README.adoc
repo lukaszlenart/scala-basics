@@ -237,7 +237,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - create a companion object for `CarGarage` case class
 - add `ready_?(car: Car): Boolean` method to the companion object
 - return `true` if car is not broken and its `make` is "mercedes" and `driver`'s `age` is over 18
-- create a test case to check implementation
+- create a test case to check the implementation
 
 ## module7 - Higher Order Functions
 
@@ -248,9 +248,11 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 ### task1:
 
-- define an object that will produce a function to accept a driver based on driver type and his age:
-  - a `Normal` driver can drive if his age is over or equal 18
-  - a `Professional` driver can drive if his age is over or equal 21
+- define an object with a function that will produce a function based on a `driver`'s type
+  and will accept the driver based on his age:
+  - a `Normal` driver can drive if his age is equal or over 18
+  - a `Professional` driver can drive if his age is equal or over 21
   - any other driver cannot drive
+- create a test case to check the implementation
 
 ### task2:

@@ -4,20 +4,20 @@ import module5.DriverType.Normal
 
 object AcceptDriver {
 
-  def accept(driver: Driver): Int => Boolean = {
+  def accept(driver: Driver): Driver => Boolean = {
     driver.driverType match {
       case Some(Normal) =>
-        (age: Int) => {
-          age >= 18
+        driver => {
+          driver.age >= 18
         }
 
       case Some(_) =>
-        (age: Int) => {
-          age >= 21
+        driver => {
+          driver.age >= 21
         }
 
       case _ =>
-        (_: Int) => {
+        _ => {
           false
         }
     }
