@@ -4,7 +4,7 @@ import module2.Driver
 import module5.DriverType.{Normal, Professional}
 import org.scalatest.{FlatSpec, Matchers}
 
-class DriverAcceptanceTest extends FlatSpec with Matchers {
+class AcceptDriverTest extends FlatSpec with Matchers {
 
   it should "accept normal Driver over 18 age" in {
     val driver: Driver = Driver("123", 19, Some(Normal))
