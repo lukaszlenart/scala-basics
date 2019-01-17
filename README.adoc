@@ -256,3 +256,10 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - create a test case to check the implementation
 
 ### task2:
+
+- define a sealed trait `CarMake` with two case objects `VW` and `Ford` (similar to `DriverType` from module 5)
+- define a case class `LuxuryCar` with a `CarMake` field
+- define a `passCertification` function which accepts a function `CarMake => Boolean` and use it
+- create a test case to check the implementation
+  - if `VW` it should pass the certification
+  - if `Ford` it shouldn't pass the certification
