@@ -1,6 +1,7 @@
-:toc:
-
 image::http://img.shields.io/:license-apache-blue.svg[title = "License", link = "http://www.apache.org/licenses/LICENSE-2.0.html"]
+image:https://travis-ci.org/lukaszlenart/scala-basics.svg?branch=master["Build Status", link="https://travis-ci.org/lukaszlenart/scala-basics"]
+
+:toc:
 
 # Introduction
 
