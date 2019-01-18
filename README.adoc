@@ -46,14 +46,14 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 - create `src/main/resources`, `src/main/scala` folders
 - create `src/test/resources`, `src/test/scala` folders
 - create `build.sbt` file in the root folder and define project's basic information like
-  `name`, `version`, `scalaVersion` and first dependency
+  `name`, `version`, `scalaVersion` and a first dependency
 - start sbt in the root folder
 
 ### task2:
 
 - use `sbt new` to generate a new project, use an example template from the page below
 
-  https://www.scala-sbt.org/1.0/docs/sbt-new-and-Templates.html
+  [https://www.scala-sbt.org/1.0/docs/sbt-new-and-Templates.html](https://www.scala-sbt.org/1.0/docs/sbt-new-and-Templates.html)
 
 ## Unit testing
 
