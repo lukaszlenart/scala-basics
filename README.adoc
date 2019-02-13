@@ -13,6 +13,7 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 - install JDK8
 - install `sbt`
+- (optional) install Scala 2.12 (sbt on first run should download a proper version)
 - install IDE of your choice which supports Scala (IDEA Community Edition with Scala plugin is preferred)
 - checkout the project
 ```
