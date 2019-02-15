@@ -11,259 +11,267 @@ This is a basic Scala workshop to allow smooth introduction into principal Scala
 
 ## Prerequisites
 
-- install JDK8
-- install `sbt`
-- (optional) install Scala 2.12 (sbt on first run should download a proper version)
-- install IDE of your choice which supports Scala (IDEA Community Edition with Scala plugin is preferred)
-- checkout the project
+* install JDK8
+* install `sbt`
+* install IDE of your choice which supports Scala (IDEA Community Edition with Scala plugin is preferred)
+* checkout the project
 ```
   git clone git@github.com:lukaszlenart/scala-basics.git
 ```
-- start `sbt` within the project's folder to download all the dependencies
+* start `sbt` within the project's folder to download all the dependencies
 
 ## Scala basics
 
-- REPL, IntelliJ IDEA Scratch files
-- `val`, `var`, `def`
-- `if`, `for`
-- `String`, `Int`
-- generics
+* REPL, IntelliJ IDEA Scratch files
+* `val`, `var`, `def`
+* `if`, `for`
+* `String`, `Int`
+* generics
 
 ### task:
 
-- use REPL to sum two Ints and if the result is greater than 0 print it, in other case print a message
-- use REPL to define a mutable empty String variable, then assign a message to the variable
+* use REPL to sum two Ints and if the result is greater than 0 print it, in other case print a message
+* use REPL to define a mutable empty String variable, then assign a message to the variable
   and if length of the message is greater than 10, print it 10 times, in other case just once
 
 ## SBT setting up project & basic commands
 
-- directory structure
-- configuration files
-- commands: `compile`, `clean`, `reload`, `console`, `test`, `testOnly`
+* directory structure
+* configuration files
+* commands: `compile`, `clean`, `reload`, `console`, `test`, `testOnly`
 
 ### task1:
 
-- create a folder for a new project
-- create `src/main/resources`, `src/main/scala` folders
-- create `src/test/resources`, `src/test/scala` folders
-- create `build.sbt` file in the root folder and define project's basic information like
+* create a folder for a new project
+* create `src/main/resources`, `src/main/scala` folders
+* create `src/test/resources`, `src/test/scala` folders
+* create `build.sbt` file in the root folder and define project's basic information like
   `name`, `version`, `scalaVersion` and a first dependency
-- start sbt in the root folder
+* start sbt in the root folder
 
-### task2:
+### task2 (optional, do it at home):
 
-- use `sbt new` to generate a new project, use an example template from the page below
+* use `sbt new` to generate a new project, use an example template from the page below
 
-  [https://www.scala-sbt.org/1.0/docs/sbt-new-and-Templates.html](https://www.scala-sbt.org/1.0/docs/sbt-new-and-Templates.html)
+```
+https://www.scala-sbt.org/1.0/docs/sbt-new-and-Templates.html
+```
 
 ## Unit testing
 
-- ScalaTest, Spec2
-- how to create a unit test
+* ScalaTest, Spec2
+* how to create a unit test
 
 ### task:
 
-- create a simple unit test with passing assertion
-- create another simple unit test with failing assertion
-- use `test` or `testOnly` to check results
-- `ignore` the failing test and re-run the test
+* create a simple unit test with passing assertion
+* create another simple unit test with failing assertion
+* use `test` or `testOnly` to check results
+* `ignore` the failing test and re-run the test
 
 ## module1 - OOP
 
-- `class`, `case class`
-- performing operations in constructor
-- `object`
-- companion object & `apply`
+* `class`, `case class`
+** please do `task1` and `task2`
+* performing operations in constructor
+** please do `task3`
+* `object`
+* companion object & `apply`
+** please do `task4` and `task5`
 
 ### task1:
 
-- create a class `SimplePerson` with `String` fields `firstName` and `lastName`
-- define a method to calculate `fullName` - concatenate `firstName` and `lastName`
-- create a unit test to cover the above logic
+* create a class `SimplePerson` with `String` fields `firstName` and `lastName`
+* define a method to calculate `fullName` - concatenate `firstName` and `lastName`
+* create a unit test to cover the above logic
 
 ### task2:
 
-- repeat the same from task1 but using `case class` and class name `Person`
-- add additional assertion to check if `firstName` and `lastName` have proper values
+* repeat the same from task1 but using `case class` and class name `Person`
+* add additional assertion to check if `firstName` and `lastName` have proper values
 
 ### task3:
 
-- create a case class `AutoPerson` with String fields `firstName` and `lastName`
-- define a mutable String field `fullName`
-- calculate the `fullName` in constructor
-- create a unit test to cover the above logic
+* create a case class `AutoPerson` with String fields `firstName` and `lastName`
+* define a mutable String field `fullName`
+* calculate the `fullName` in constructor
+* create a unit test to cover the above logic
 
 ### task4:
 
-- create an object `PersonSingleton`
-- define a mutable field `fullName`
-- create two unit tests
-  - in the first one assign value to `fullName` and assert its value
-  - with the second test, assert only the value from the first test
+* create an object `PersonSingleton`
+* define a mutable field `fullName`
+* create two unit tests
+  * in the first one assign value to `fullName` and assert its value
+  * with the second test, assert only the value from the first test
 
 ### task5:
 
-- create a companion object for the case class `Person`
-- define a method `apply` which accept just single string
-  - split the argument on white space to create a proper `Person` object
-- create a unit test to cover creating a person based on a single string
+* create a companion object for the case class `Person`
+* define a method `apply` which accept just a single string
+** split the argument on white space to create a proper `Person` object
+* create a unit test to cover creating a person based on a single string
 
 ## module2 - methods
 
-- default arguments
-- named arguments
+* default arguments
+* named arguments
 
 ### task1:
 
-- create a case class `Car` with a field `make: String`
-- define a method with at least two arguments
-  - define the last argument with default value
-- combine all the arguments and `make` field as a result
-- create a unit test to cover calling the method using default value and passing specific value for the default argument
+* create a case class `Car` with a field `make: String`
+* define a method with at least two arguments
+** define the last argument with default value
+* combine all the arguments and `make` field as a result
+* create a unit test to cover calling the method using default value and passing specific value for the default argument
 
 ### task2:
 
-- create a case class `Driver` with at least two arguments
-  - `licenseId`
-  - `age`
-- define a method `canDrive_? : Boolean` to check if driver's age is over or equal 18
-- create a unit test to cover the method
-- add additional assertion and use `.copy()` with named parameter to define a new value for the age
-  - use assertion to check if the new value was properly re-defined
+* create a case class `Driver` with at least two arguments:
+** `licenseId`
+** `age`
+* define a method `canDrive_? : Boolean` to check if driver's age is over or equal 18
+* create a unit test to cover the method
+* add additional assertion and use `.copy()` with named parameter to define a new value for the age
+** use assertion to check if the new value was properly re-defined
 
 ## module3 - collections & functional programming
 
-- `Seq`, `List`, `Map`, tuples
-- `elem :: Nil`, `head :: tail`
-- `.empty`, `.filter`, `.map`, `.find`, `.count`, `.sortBy`
-- `.get`, `.head`, `.headOption`
+* `Seq`, `List`, `Map`, tuples
+* `elem :: Nil`, `head :: tail`
+** please do `task1` and `task2`
+* `.empty`, `.filter`, `.map`, `.find`, `.count`, `.sortBy`
+* `.get`, `.head`, `.headOption`
+** please do `task3` and `task4`
 
 ### task1:
 
-- create a case class `CarMileage` with a field `mileage: Seq`
-- create a unit test and init `CarMileage` using `Seq(...)`
-- assert if `mileage` value is the same as sequence using `elem :: Nil` construction
-- assert if a first element of `mileage` value is the same using `head :: tail` construction
+* create a case class `CarMileage` with a field `mileage: Seq`
+* create a unit test and init `CarMileage` using `Seq(...)`
+* assert if `mileage` value is the same as sequence using `elem :: Nil` construction
+* assert if a first element of `mileage` value is the same using `head :: tail` construction
 
 ### task2:
 
-- create a case class `CarGarage` with field `cars: Map[String, Car]`
-- define a method to find a car by given model
-- define a method to count all cars in the `Garage` matching given model
-- create a unit test to cover the above logic
+* create a case class `CarGarage` with field `cars: Map[String, Car]`
+* define a method to find a car by given model
+* define a method to count all cars in the `Garage` matching given model
+* create a unit test to cover the above logic
 
 ### task3:
 
-- extend the case class `Car` and add a `broken:  Boolean` field with default value set to `false`
-- define additional method in `CarGarage` to list cars which are broken
-- create a unit test to cover the above logic
+* extend the case class `Car` and add a `broken:  Boolean` field with default value set to `false`
+* define additional method in `CarGarage` to list cars which are broken
+* create a unit test to cover the above logic
 
 ### task4:
-- extend method from task3 to sort cars by `make`
-- create a unit test to cover the logic
+* extend method from task3 to sort cars by `make`
+* create a unit test to cover the logic
 
 ## module4 - Optionals & for-expressions
 
-- `Option` & `None` & `Some`, `Either`
-- `.flatMap`, `.map`, `.flatten`
-- simple `for`, for-comprehension
+* `Option` & `None` & `Some`
+** please do `task1` and `task2`
+* `.flatMap`, `.map`, `.flatten`
+* simple `for`, for-comprehension
+** please do `task3` and `task4`
 
 ### task1:
 
-- extend the class `Car` and define an optional field `driver` of type `Driver` with default value
-- create a unit test to cover creating a `Car` with and without a driver
+* extend the class `Car` and define an optional field `driver` of type `Driver` with a default value
+* create a unit test to cover creating a `Car` with and without the driver
 
 ### task2:
 
-- extend `CarGarage` with method `readyCars` which looks for cars with `driver` field defined
-- create a unit test to cover the logic
+* extend `CarGarage` with a method `readyCars` which looks for cars with the `driver` field defined
+* create a unit test to cover the logic
 
 ### task3:
 
-- extend `CarGarage` with method `readyDrivers` which looks for cars with `driver` field defined and returns those drivers
-- create a unit test to cover the logic
+* extend `CarGarage` with method `readyDrivers` which looks for cars with `driver` field defined and returns those drivers
+* create a unit test to cover the logic
 
 ### task4:
 
-- redefine `readyDrivers` to use `for-comprehension`
-** you can use `readDrivers2` name to keep the old version
-- use the same unit test as in task3 to check if everything is ok
+* redefine `readyDrivers` to use `for-comprehension`
+** you can use `readDrivers1` name to keep the old version
+* use the same unit test as in task3 to check if everything is ok
 
 ## module5 - traits & inheritance
 
-- `trait`, `extends`, `with`
-- case objects (better than enums)
+* `trait`, `extends`, `with`
+* case objects (better than enums)
 
 ### task1:
 
-- define a trait `Professional` with method `professionalDriverLicense`
-- define a new case class `ProfessionalDriver` which extends `SimplePerson` and with `Professional` trait
-- implement missing method
-  - you can extend `SimplePerson` and add optional driver license field with default value
-    use this value to implement `professionalDriverLicense` method
-  - or
-  - define a new field in `ProfessionalDriver` class and use it to implement the method
-- create a unit test to cover logic of `professionalDriverLicense`
+* define a trait `Professional` with method `professionalDriverLicense`
+* define a new case class `ProfessionalDriver` which extends `SimplePerson` and with `Professional` trait
+* implement missing method
+** you can extend `SimplePerson` and add optional driver license field with default value
+   use this value to implement `professionalDriverLicense` method
+** or
+** define a new field in `ProfessionalDriver` class and use it to implement the method
+* create a unit test to cover logic of `professionalDriverLicense`
 
 ### task2:
 
-- change implementation of `professionalDriverLicense` in `Professional` trait and return `missing` by default
-- define a new case class `SimpleDriver` which extends `SimplePerson` and with `Professional` trait
-- create a unit test to cover logic of default implementation
+* change implementation of `professionalDriverLicense` in `Professional` trait and return `missing` by default
+* define a new case class `SimpleDriver` which extends `SimplePerson` and with `Professional` trait
+* create a unit test to cover logic of default implementation
 
 ### task3:
 
-- define `sealed trait DriverType`
-- create related companion object
-- inside the companion object add two `case object`s `Normal` and `Professional` implementing the trait
-- extend `Driver` case class and add optional `driverType` field of type `DriverType`
-- create a test case covering creating `Driver` objects with both values of `DriverType`
+* define `sealed trait DriverType`
+* create related companion object
+* inside the companion object add two `case object`s `Normal` and `Professional` implementing the trait
+* extend `Driver` case class and add optional `driverType` field of type `DriverType`
+* create a test case covering creating `Driver` objects with both values of `DriverType`
 
 ## module6 - pattern matching
 
-- `match` & `case`
-- `unapply`
+* `match` & `case`
+* `unapply`
 
 ### task1:
 
-- add additional type to `DriverType` - `Missing`
-- extend `Driver` case class and define `driverLicense` method which returns driver's `licenseId` prefixed with given type
-- if type isn't defined return only `licenseId`
-- create a test case to cover this logic
+* add additional type to `DriverType` - `Missing`
+* extend `Driver` case class and define `driverLicense` method which returns driver's `licenseId` prefixed with given type
+* if type isn't defined return only `licenseId`
+* create a test case to cover this logic
 
 ### task2:
 
-- change logic of `driverLicense` method from task1 and if `driverType` equals `Missing` or is `None` return `licenseId`
-- add additional test case to cover this logic
+* change logic of `driverLicense` method from task1 and if `driverType` equals `Missing` or is `None` return `licenseId`
+* add additional test case to cover this logic
 
 ### task3:
 
-- create a companion object for `CarGarage` case class
-- add `ready_?(car: Car): Boolean` method to the companion object
-- return `true` if car is not broken and its `make` is "mercedes" and `driver`'s `age` is over 18
-- create a test case to check the implementation
+* create a companion object for `CarGarage` case class
+* add `ready_?(car: Car): Boolean` method to the companion object
+* return `true` if car is not broken and its `make` is "mercedes" and `driver`'s `age` is over 18
+* create a test case to check the implementation
 
 ## module7 - Higher Order Functions
 
-- functions that accept functions `def func(calcFn: Double => Double): Double
-- functions that produce functions `def builder(input: Double): Double => Double`
+* functions that accept functions `def func(calcFn: Double => Double): Double
+* functions that produce functions `def builder(input: Double): Double => Double`
 
  https://docs.scala-lang.org/tour/higher-order-functions.html
 
 ### task1:
 
-- define an object with a function that will produce a function based on a `driver`'s type
+* define an object with a function that will produce a function based on a `driver`'s type
   and will accept the driver based on his age:
-  - a `Normal` driver can drive if his age is equal or over 18
-  - a `Professional` driver can drive if his age is equal or over 21
-  - any other driver cannot drive
-- create a test case to check the implementation
+** a `Normal` driver can drive if his age is equal or over 18
+** a `Professional` driver can drive if his age is equal or over 21
+** any other driver cannot drive
+* create a test case to check the implementation
 
 ### task2:
 
-- define a sealed trait `CarMake` with two case objects `VW` and `Ford` (similar to `DriverType` from module 5)
-- define a case class `LuxuryCar` with a `CarMake` field
-- define a `passCertification` function which accepts a function `CarMake => Boolean` and use it
-- create a test case to check the implementation
-  - if `VW` it should pass the certification
-  - if `Ford` it shouldn't pass the certification
+* define a sealed trait `CarMake` with two case objects `VW` and `Ford` (similar to `DriverType` from module 5)
+* define a case class `LuxuryCar` with a `CarMake` field
+* define a `passCertification` function which accepts a function `CarMake => Boolean` and use it
+* create a test case to check the implementation
+** if `VW` it should pass the certification
+** if `Ford` it shouldn't pass the certification
