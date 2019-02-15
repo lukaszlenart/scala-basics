@@ -15,13 +15,10 @@ class CarMileageTest extends FlatSpec with Matchers {
   it should "have the first element the same" in {
     val carMileage = CarMileage(List(1, 2, 3, 4))
 
-    carMileage.mileage match {
-      case head :: _ =>
-        head shouldBe 1
+    val head :: tail = carMileage.mileage
 
-      case Nil =>
-        fail("empty list!")
-    }
+    head shouldBe 1
+    tail shouldBe 2 :: 3 :: 4 :: Nil
   }
 
 }
