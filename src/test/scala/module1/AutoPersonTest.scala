@@ -4,8 +4,6 @@ import org.scalatest._
 
 class AutoPersonTest extends FlatSpec with Matchers {
 
-  behavior of "Auto Person"
-
   it should "return fullName" in {
     val person = AutoPerson("Lukasz", "Lenart")
 
