@@ -2,9 +2,10 @@ package module6
 
 import module2.Driver
 import module5.DriverType
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class DriverTypeTest extends FlatSpec with Matchers {
+class DriverTypeTest extends AnyFlatSpec with Matchers {
 
   behavior of "Driver Type test"
 

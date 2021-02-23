@@ -1,8 +1,9 @@
 package module1
 
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class PersonTest extends FlatSpec with Matchers {
+class PersonTest extends AnyFlatSpec with Matchers {
 
   behavior of "Person"
 

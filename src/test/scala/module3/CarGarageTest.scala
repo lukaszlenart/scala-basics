@@ -2,8 +2,10 @@ package module3
 
 import module2.Car
 import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class CarGarageTest extends FlatSpec with Matchers {
+class CarGarageTest extends AnyFlatSpec with Matchers {
 
   behavior of "Car Mileage test"
 
@@ -42,8 +44,8 @@ class CarGarageTest extends FlatSpec with Matchers {
   }
 
   it should "find broken cars" in {
-    val mercedes1 = Car("mercedes", true)
-    val mercedes2 = Car("mercedes", true)
+    val mercedes1 = Car("mercedes", broken = true)
+    val mercedes2 = Car("mercedes", broken = true)
     val toyota = Car("toyota")
 
     val carGarage = CarGarage(Map("mercedes1" -> mercedes1, "mercedes2" -> mercedes2, "toyota" -> toyota))
@@ -52,9 +54,9 @@ class CarGarageTest extends FlatSpec with Matchers {
   }
 
   it should "find broken cars sorted by make" in {
-    val mercedes1 = Car("mercedes", true)
+    val mercedes1 = Car("mercedes", broken = true)
     val mercedes2 = Car("mercedes")
-    val honda = Car("honda", true)
+    val honda = Car("honda", broken = true)
 
     val carGarage = CarGarage(Map("mercedes1" -> mercedes1, "mercedes2" -> mercedes2, "toyota" -> honda))
 

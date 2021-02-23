@@ -1,8 +1,9 @@
 package module5
 
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class ProfessionalDriverTest extends FlatSpec with Matchers {
+class ProfessionalDriverTest extends AnyFlatSpec with Matchers {
 
   behavior of "Professional Driver test"
 

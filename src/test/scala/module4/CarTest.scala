@@ -1,9 +1,10 @@
 package module4
 
 import module2.{Car, Driver}
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class CarTest extends FlatSpec with Matchers {
+class CarTest extends AnyFlatSpec with Matchers {
 
   behavior of "Car test"
 

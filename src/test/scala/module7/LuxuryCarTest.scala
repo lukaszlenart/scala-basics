@@ -1,8 +1,9 @@
 package module7
 
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class LuxuryCarTest extends FlatSpec with Matchers {
+class LuxuryCarTest extends AnyFlatSpec with Matchers {
 
   it should "pass certification if VW" in {
     val car = LuxuryCar(CarMake.VW)

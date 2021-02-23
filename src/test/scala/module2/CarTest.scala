@@ -1,8 +1,9 @@
 package module2
 
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class CarTest extends FlatSpec with Matchers {
+class CarTest extends AnyFlatSpec with Matchers {
 
   behavior of "Car"
 
@@ -15,7 +16,7 @@ class CarTest extends FlatSpec with Matchers {
   it should "start as with hot engine" in {
     val car = Car("toyota")
 
-    car.startEngine("12345", false) should be("12345 - starting toyota")
+    car.startEngine("12345", cold = false) should be("12345 - starting toyota")
   }
 
 }

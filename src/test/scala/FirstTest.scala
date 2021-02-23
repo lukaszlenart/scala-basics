@@ -1,6 +1,7 @@
-import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class FirstTest extends FlatSpec with Matchers {
+class FirstTest extends AnyFlatSpec with Matchers {
 
   behavior of "First test"
 
@@ -9,7 +10,7 @@ class FirstTest extends FlatSpec with Matchers {
   }
 
   ignore should "fail" in {
-    true should be (false)
+    true shouldBe false
   }
 
 }
